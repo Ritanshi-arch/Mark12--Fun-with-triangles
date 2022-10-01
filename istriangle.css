@@ -1,0 +1,85 @@
+.root{
+    --primary-color: #000000;
+    --primary2-color: #c6fa98;
+}
+
+h1 {
+    color: #5D3FD3
+    
+}
+
+body{
+    text-align: center;
+    background-color: black;
+    color: #5D3FD3;
+    
+
+}
+
+.navigation {
+    background-color: #5D3FD3;
+    color: white;
+    padding: 2rem;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding-right: 1.5rem;
+    font-size: large ;
+    font-style: bold;
+
+}
+
+.p {
+    color: white;
+}
+
+#output {
+    margin-top: 1rem;
+    max-width: 400px;
+    margin-left: 35%;
+    margin-right: 35%;
+    
+
+    /* border: 3px solid; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: larger;
+}
+
+#submit-answer-btn, #quizBtn ,#CheckArea ,#is-triangle-btn , #Hypotenuse-btn {
+    margin-top: 1rem;
+    background: transparent;
+    color: #5D3FD3;
+    border-radius: 1rem;
+    border-color:  white;
+    padding: 0.5rem;
+    font-size: large;
+}
+
+#outputA {
+    margin-top: 1rem;
+    
+}
+.input-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.radio-container{
+    margin-top: 0.5rem;
+    text-align: left;
+    position:sticky ;
+    color: #5D3FD3;
+    margin-left: 45%;
+}
+
+.container {
+
+    width: 15%;
+    margin: auto;
+    text-align: flex;
+    
+}

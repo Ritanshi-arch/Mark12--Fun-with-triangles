@@ -1,45 +1,173 @@
-const inputs = document.querySelectorAll(".angle-input");
-const isTriangleBtn = document.querySelector("#is-triangle-btn");
-const outputEl = document.querySelector("#output");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <nav class="navigation container">
+       
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link" href="/">Home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="./isTriangle.html">Is triangle</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link link-active" href="./quiz.html">Quiz</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="./Hypotenuse.html">Hypotenuse</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="./area.html">Area</a>
+            </li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <h1 class="hero-heading">Let's take a quiz on <span class="heading-inverted">Triangles </span></h1>
+    </header>
 
-function calSumOfAngle(angle1 , angle2 , angle3) {
-    const sumOfAngle = angle1 + angle2 + angle3;
-    return sumOfAngle;
-}
+    
+        <section class="section off-white-quiz">
+            <div class="container-center">
+                <form action="" class="quiz-form">
 
-function isTriangle() {
-    const sumOfAngle = calSumOfAngle(Number(inputs[0].value),Number(inputs[1].value),Number(inputs[2].value));
-    if(inputs[0].value == 0 )
-    {
-        outputEl.innerText = ("😓Value can't be null in Angle 1 😓")
-    }
-    else if(inputs[0].value < 0 )
-    {
-        outputEl.innerText = ("😟Value can't be Negative in Angle 1 😟")
-    }
-    else if(inputs[1].value == 0 )
-    {
-        outputEl.innerText = ("😓Value can't be null in Angle 2 😓")
-    }
-    else if(inputs[1].value < 0 )
-    {
-        outputEl.innerText = ("😟Value can't be Negative in Angle 2 😟")
-    }
-    else if(inputs[2].value == 0 )
-    {
-        outputEl.innerText = ("😓Value can't be null in Angle 3 😓")
-    }
-    else if(inputs[2].value < 0 )
-    {
-        outputEl.innerText = ("😟Value can't be Negative in Angle 3😟")
-    }
-   
-    else if(sumOfAngle === 180){
-        outputEl.innerText = " 😎 Yay, The angles form a triangles 😎 ";
-    } else{
-        outputEl.innerText = "😥 oh, oh! The angles don't form a triangle 😥";    
-    }
-}
+                    <!-- first question -->
+                    <div class="common-question">
+                        1. What is the value of third angle if other two angles are 90 and 60?
+                    </div>
+                    <div>
+                        <div class="input-container">
+                            <input id="1-a" type="radio" class="common-radio" name="question1" value="30">
+                            <label for="1-a">30</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="1-b" type="radio" class="common-radio" name="question1" value="60">
+                            <label for="1-b">60</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="1-c" type="radio" class="common-radio" name="question1" value="90">
+                            <label for="1-c">90</label>
+                        </div>
+                    </div>
 
+                     <!-- Second question -->
+                    <div class="common-question">
+                        2. Calculate hypotenuse if base and height are 3 and 4 respectively
+                    </div>
+                    <div>
+                        <div class="input-container">
+                            <input id="2-a" type="radio" class="common-radio" name="question2" value="3">
+                            <label for="2-a">3</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="2-b" type="radio" class="common-radio" name="question2" value="6">
+                            <label for="2-b">6</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="2-c" type="radio" class="common-radio" name="question2" value="5">
+                            <label for="2-c">5</label>
+                        </div>
+                    </div>
 
-isTriangleBtn.addEventListener("click", isTriangle); 
+                     <!-- Third question -->
+                    <div class="common-question">
+                        3. A triangle having all three sides equal is known as ?
+                    </div>
+                    <div>
+                        <div class="input-container">
+                            <input id="3-a" type="radio" class="common-radio" name="question3" value="scalene">
+                            <label for="3-a">scalene</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="3-b" type="radio" class="common-radio" name="question3" value="isosceles">
+                            <label for="3-b">isosceles</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="3-c" type="radio" class="common-radio" name="question3" value="equilateral">
+                            <label for="3-c">equilateral</label>
+                        </div>
+                    </div>
+
+                     <!-- Fourth question -->
+                    <div class="common-question">
+                        4. Area of a right trinangle with base = 20 and height = 25 is 
+                    </div>
+                    <div>
+                        <div class="input-container">
+                            <input id="4-a" type="radio" class="common-radio" name="question4" value="300">
+                            <label for="4-a">300</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="4-b" type="radio" class="common-radio" name="question4" value="250">
+                            <label for="4-b">250</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="4-c" type="radio" class="common-radio" name="question4" value="500">
+                            <label for="4-c">500</label>
+                        </div>
+                    </div>
+
+                     <!-- Fifth question -->
+                    <div class="common-question">
+                        5. An acute triangle has  
+                    </div>
+                    <div>
+                        <div class="input-container">
+                            <input id="5-a" type="radio" class="common-radio" name="question5" value="less than 90">
+                            <label for="5-a">All angles less than 90</label>
+                        </div>
+                        <div class="input-container">
+                            <input id="5-b" type="radio" class="common-radio" name="question5" value="equal to 90">
+                            <label for="5-b">One angle equal to 90
+                            </label>
+                        </div>
+                        <div class="input-container">
+                            <input id="5-c" type="radio" class="common-radio" name="question5" value="greater than 90">
+                            <label for="5-c">2 angles greater than 90
+                            </label>
+                        </div>
+                    </div>
+
+                  <button type="reset" id="reset-form-btn" class="link link-primary">Reset Inputs</button>
+
+                    
+                </form>
+
+                <p id="output-text"></p>
+                <button id="submit-btn" class="link link-primary-submit">Check My Score</button>
+                
+                
+            </div>
+        </section>
+
+    
+    <footer class="footer">
+        <div class="footer-header">I'm active on</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/Ritanshi-arch">Github
+
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://twitter.com/Ritanshi16">Twitter
+
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://www.linkedin.com/in/ritanshi-arya-729244187/">LinkedIn
+
+                </a>
+            </li>
+
+        </ul>
+    </footer>
+    <script src="./quiz.js"></script>
+</body>
+</html>

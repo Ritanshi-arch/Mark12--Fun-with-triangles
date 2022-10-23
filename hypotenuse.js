@@ -1,37 +1,27 @@
-const que01 = document.querySelectorAll(".que01");
-const que02 = document.querySelectorAll(".que02");
-const que03 = document.querySelectorAll(".que03");
-const que04 = document.querySelectorAll(".que04");
-const que05 = document.querySelectorAll(".que05");
-const quizBtn = document.querySelector("#quizBtn");
-const quizOutput = document.querySelector("#output");
+const inputs = document.querySelectorAll(".inputs-isTriangle");
+const calculateBtn = document.querySelector("#calculate-btn");
+const output = document.querySelector("#output-hypo")
 
 
-function checkChecked(){
-
-    let score = 0;
-    if(que01[1].checked){
-        score++
-    }
-
-    if(que02[2].checked){
-        score++
-    }
-
-    if(que03[0].checked){
-        score++
-    } 
-
-    if(que04[0].checked){
-        score++
-    }
-
-    if(que05[0].checked){
-        score++
-    }
-
-
-    quizOutput.innerText = `Your Score is ${score}`
+function calculateSumOfSquares(a, b){
+     const sumOfSquares = a*a + b*b;
+     return sumOfSquares;
 }
 
-quizBtn.addEventListener("click", checkChecked);
+function calculateHypo(){
+
+   if(inputs[0].value == "" || inputs[1].value == "" || inputs[0].value <= 0 || inputs[1].value <= 0){
+      output.innerText = "Please check your input values";
+   }
+   else{
+
+      const sumOfSquares = calculateSumOfSquares(Number(inputs[0].value), Number(inputs[1].value));
+   
+      const hypotenuseLength = Math.sqrt(sumOfSquares).toFixed(2);
+   
+      output.innerText = "The length of the Hypotenuse is " + hypotenuseLength;
+   }
+      
+   }
+   
+   calculateBtn.addEventListener("click", calculateHypo)

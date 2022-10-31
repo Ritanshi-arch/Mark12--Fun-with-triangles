@@ -168,8 +168,8 @@ body {
 .inputs-isTriangle{
     display: block;
     margin: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
     padding: .5rem;
     border-radius: .3rem;
     
@@ -195,12 +195,12 @@ body {
     border-top-right-radius: 2rem;
     text-align: center;
     color: white;
-    position: relative; bottom: 0; left: 0; right: 0;
+    position: relative; bottom: 01; left: 0; right: 0;
         
 }
 .footer-home{
     background-color: var(--primary-color);
-    padding: 1.5rem 1rem;
+    padding: 0rem 0rem;
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
     text-align: center;

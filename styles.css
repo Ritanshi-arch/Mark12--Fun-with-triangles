@@ -1,237 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-:root {
-    --primary-color: #0d8a9a;
-    --dark-gray: #666b73;
-    --off-white:#d5d7d8;
+.root{
+    --primary-color: #8ef190;
+    --primary2-color: #77cdcf;
 }
 
-/** body style **/
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0px;
-
+h1 {
+    color: #3fd375
+    
 }
 
-
-/** container **/
-.container {
-    padding: 0rem 1rem;
-}
-
-.container-center {
-    max-width: 660px;
-    margin: auto;
-}
-
-
-/** margin for project sections **/
- .margin-md{
-    margin-bottom: 4rem;
-    margin-top: 2.5rem;
- }
-
- .margin-md-blog1{
-    margin-bottom: 4rem;
-    margin-top: -0.5rem;
- }
-/** links **/
-
-.link {
-    text-decoration: none;
-    padding: 0.5rem 1rem;
+body{
+    text-align: center;
+    background-color: rgb(15, 2, 56);
+    color: #d7d2f4;
+    
 
 }
-
-
-/** look into BEM method **/
-.link-primary {
-    background-color: var(--primary-color);
-    border-radius: 0.5rem;
-    color: white;
-}
-.link-primary-home {
-    background-color: var(--primary-color);
-    border-radius: 0.5rem;
-    color: white;
-    text-decoration: none;
-    padding: 1rem 1rem;
-}
-.link-primary-submit {
-    background-color: var(--primary-color);
-    border-radius: 0.5rem;
-    color: white;
-    border: none;
-}
-
-.link-secondary {
-    color: var(--primary-color);
-    border-radius: 0.5rem;
-    border: 1px solid var(--primary-color);
-}
-
-#reset-form-btn{
-    margin: 1rem;
-    float: right;
-    border: none;
-}
-
-
-
-/** lists **/
-
-.list-non-bullet {
-    list-style: none;
-}
-
-.list-item-inline {
-    display: inline;
-    padding: 0rem 0.5rem;
-}
-
-.blog1-ul{
-    list-style-type: none;
-    margin: 1.5rem;
-}
-
-/** navigation **/
 
 .navigation {
-    background-color: var(--primary-color);
-    color: white;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-    padding: 1rem;
-}
-
-
-.navigation .nav-pills {
-    text-align: right;
-}
-
-.navigation .link {
-    color: white;
-}
-
-.navigation .nav-brand {
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-
-.navigation .link-active {
-    font-weight: bold;
-}
-
-.hero {
-    padding: 2rem;
-    padding-top: 2rem;
-}
-
-
-.hero .hero-heading {
-    /* padding-top: 1rem; */
-    color: var(--dark-gray);
-    text-align: center;
-}
-
-.hero .hero-heading .heading-inverted {
-    color: var(--primary-color);
-}
-
-
-/** sections **/
-
-.section{
+    background-color: #533d04;
     padding: 2rem;
 }
 
-.section h1 {
-    text-align: center;
+.btn {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding-right: 1.5rem;
+    font-size: large ;
+    font-style: bold;
+
 }
 
-.off-white{
-    background-color: var(--off-white);
-    width: 20%;
-    margin: auto;
-    margin-top: 2rem;
-    border-radius: .3rem;
-}
-.off-white-isTriangle{
-    background-color: var(--off-white);
-    width: 40%;
-    margin: auto;
-    border-radius: .3rem;
+
+#output {
+    margin-top: 1rem;
+    max-width: 400px;
+    margin-left: 35%;
+    margin-right: 35%;
     
+
+    /* border: 3px solid; */
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: larger;
 }
 
-.inputs-isTriangle{
-    display: block;
-    margin: auto;
-    margin-top: 0rem;
-    margin-bottom: 0rem;
-    padding: .5rem;
-    border-radius: .3rem;
-    
-}
-    
-.off-white-quiz{
-    background-color: var(--off-white);
-    width: 50%;
-    margin: auto;
-    margin-top: .5rem;
-    margin-bottom: 5rem;
-    border-radius: .3rem;
-}
-
-
-
-/** footer **/
-
-.footer{
-    background-color: var(--primary-color);
-    padding: 1.5rem 1rem;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    text-align: center;
-    color: white;
-    position: relative; bottom: 01; left: 0; right: 0;
-        
-}
-.footer-home{
-    background-color: var(--primary-color);
-    padding: 0rem 0rem;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-    text-align: center;
-    color: white;
-    position: absolute; bottom: 0; left: 0; right: 0;
-        
-}
-
-.footer .link{
-    color: white;
-}
-.footer-home .link{
-    color: white;
-}
-
-.footer .footer-header{
-    font-weight: bold;
-    font-size: large;
-}
-.footer-home .footer-header{
-    font-weight: bold;
+#submit-answer-btn, #quizBtn ,#CheckArea ,#is-triangle-btn , #Hypotenuse-btn {
+    margin-top: 1rem;
+    background: transparent;
+    color: #3fd38e;
+    border-radius: 1rem;
+    border-color:  rgb(232, 109, 109);
+    padding: 0.5rem;
     font-size: large;
 }
 
-
-
-.footer ul{
-    padding-inline-start: 0px;
-
+#outputA {
+    margin-top: 1rem;
+    
+}
+.input-container{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(250, 231, 231);
 }
 
-.quiz-form{
-    margin: 2rem;
+.radio-container{
+    margin-top: 0.5rem;
+    text-align: left;
+    position:sticky ;
+    color: #1b0e4f;
+    margin-left: 45%;
+}
+
+.container {
+
+    width: 15%;
+    margin: auto;
+    text-align: flex;
+    
 }

@@ -1,79 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Area</title>
+    <title>Area of triangles</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
-    <nav class="navigation container">
-        <!-- <div class="nav-brand"><strong></strong></div> -->
-        <ul class="list-non-bullet nav-pills">
-            <li class="list-item-inline">
-                <a class="link" href="/">Home</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="./isTriangle.html">Is triangle</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="./quiz.html">Quiz</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="./Hypotenuse.html">Hypotenuse</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link  link-active" href="./area.html">Area</a>
-            </li>
-        </ul>
+    <nav class="navigation">
+        <a class="btn" href="./area.html">Triangle Area </a>
+        <a class="btn" href="./hypotenuse.html">Calculate Hypotenuse</a>
+        <a class="btn" href="./quiz.html"> Triangle Quiz </a>
+        <a class="btn" href="./index.html"> Is Triangle? </a>
     </nav>
-    <header class="hero">
-        <h1 class="hero-heading">Can you calculate area of <span class="heading-inverted">Triangle🔺 </span></h1>
-    </header>
-
-
-    <section class="section off-white-isTriangle">
-        <div class="container-center">
-            <center><h2 style="font-size: small ;">Hint: formula is 1/2 (base * height)</h2></center>
-            <!-- <label for="angle1">First Angle</label> -->
-            <input type="number" id="input-base" class="inputs-isTriangle" placeholder="Base">
-
-            <!-- <label for="angle2">Second Angle</label> -->
-            <input type="number" id="input-height" class="inputs-isTriangle" placeholder="Height">
-            
-            <p id="output-area"></p>
-            <button id="calculate-btn" class="link link-primary-submit">Calculate</button>
-    
-
-        </div>
-    </section>
-
-
-    <footer class="footer-home">
-        <div class="footer-header">I'm active on</div>
-        <ul class="social-links list-non-bullet">
-            <li class="list-item-inline">
-                <a class="link" href="https://github.com/Ritanshi-arch">Github
-
-                </a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="https://github.com/Ritanshi-arch">Twitter
-
-                </a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="https://www.linkedin.com/in/ritanshi-arya-729244187/">LinkedIn
-
-                </a>
-            </li>
-
-        </ul>
-    </footer>
+    <h1>Check Area of a Triangle</h1>
+    <div>
+        <p style="color: rgb(236, 138, 138) ;" >Area of a triangle = 1/2(Base*Height)</p>
+        <div class="container">
+        <label  for="base">Base(in cm)<input class="input base" type="number" /></label>
+        <label for="height">Height(in cm)<input class="input height" type="number" /></label>
+        <br>
+        <button id="CheckArea">Check Area</button></div>
+        <div id="outputA"></div>
+    </div>
 </body>
 <script src="./area.js"></script>
-
 </html>

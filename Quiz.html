@@ -4,170 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz</title>
     <link rel="stylesheet" href="./styles.css">
+    <title>Triangle Quiz App</title>
 </head>
 <body>
-    <nav class="navigation container">
-       
-        <ul class="list-non-bullet nav-pills">
-            <li class="list-item-inline">
-                <a class="link" href="/">Home</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="./isTriangle.html">Is triangle</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link link-active" href="./quiz.html">Quiz</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="./Hypotenuse.html">Hypotenuse</a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="./area.html">Area</a>
-            </li>
-        </ul>
-    </nav>
-    <header class="hero">
-        <h1 class="hero-heading">Let's take a quiz on <span class="heading-inverted">Triangles </span></h1>
+    <header>
+        <nav class="navigation">
+            <a class="btn" href="./area.html">Triangle Area </a>
+            <a class="btn" href="./hypotenuse.html">Calculate Hypotenuse</a>
+            <a class="btn" href="./quiz.html"> Triangle Quiz </a>
+            <a class="btn" href="./index.html"> Is Triangle? </a>
+        </nav>
     </header>
 
-    
-        <section class="section off-white-quiz">
-            <div class="container-center">
-                <form action="" class="quiz-form">
+    <section id="quizOne">
+        <h1>Triangle Quiz</h1>
 
-                    <!-- first question -->
-                    <div class="common-question">
-                        1. What is the value of third angle if other two angles are 90 and 60?
-                    </div>
-                    <div>
-                        <div class="input-container">
-                            <input id="1-a" type="radio" class="common-radio" name="question1" value="30">
-                            <label for="1-a">30</label>
-                        </div>
-                        <div class="input-container">
-                            <input id="1-b" type="radio" class="common-radio" name="question1" value="60">
-                            <label for="1-b">60</label>
-                        </div>
-                        <div class="input-container">
-                            <input id="1-c" type="radio" class="common-radio" name="question1" value="90">
-                            <label for="1-c">90</label>
-                        </div>
-                    </div>
-
-                     <!-- Second question -->
-                    <div class="common-question">
-                        2. Calculate hypotenuse if base and height are 3 and 4 respectively
-                    </div>
-                    <div>
-                        <div class="input-container">
-                            <input id="2-a" type="radio" class="common-radio" name="question2" value="3">
-                            <label for="2-a">3</label>
-                        </div>
-                        <div class="input-container">
-                            <input id="2-b" type="radio" class="common-radio" name="question2" value="6">
-                            <label for="2-b">6</label>
-                        </div>
-                        <div class="input-container">
-                            <input id="2-c" type="radio" class="common-radio" name="question2" value="5">
-                            <label for="2-c">5</label>
-                        </div>
-                    </div>
-
-                     <!-- Third question -->
-                    <div class="common-question">
-                        3. A triangle having all three sides equal is known as ?
-                    </div>
-                    <div>
-                        <div class="input-container">
-                            <input id="3-a" type="radio" class="common-radio" name="question3" value="scalene">
-                            <label for="3-a">scalene</label>
-                        </div>
-                        <div class="input-container">
-                            <input id="3-b" type="radio" class="common-radio" name="question3" value="isosceles">
-                            <label for="3-b">isosceles</label>
-                        </div>
-                        <div class="input-container">
-                            <input id="3-c" type="radio" class="common-radio" name="question3" value="equilateral">
-                            <label for="3-c">equilateral</label>
-                        </div>
-                    </div>
-
-                     <!-- Fourth question -->
-                    <div class="common-question">
-                        4. Area of a right trinangle with base = 20 and height = 25 is 
-                    </div>
-                    <div>
-                        <div class="input-container">
-                            <input id="4-a" type="radio" class="common-radio" name="question4" value="300">
-                            <label for="4-a">300</label>
-                        </div>
-                        <div class="input-container">
-                            <input id="4-b" type="radio" class="common-radio" name="question4" value="250">
-                            <label for="4-b">250</label>
-                        </div>
-                        <div class="input-container">
-                            <input id="4-c" type="radio" class="common-radio" name="question4" value="500">
-                            <label for="4-c">500</label>
-                        </div>
-                    </div>
-
-                     <!-- Fifth question -->
-                    <div class="common-question">
-                        5. An acute triangle has  
-                    </div>
-                    <div>
-                        <div class="input-container">
-                            <input id="5-a" type="radio" class="common-radio" name="question5" value="less than 90">
-                            <label for="5-a">All angles less than 90</label>
-                        </div>
-                        <div class="input-container">
-                            <input id="5-b" type="radio" class="common-radio" name="question5" value="equal to 90">
-                            <label for="5-b">One angle equal to 90
-                            </label>
-                        </div>
-                        <div class="input-container">
-                            <input id="5-c" type="radio" class="common-radio" name="question5" value="greater than 90">
-                            <label for="5-c">2 angles greater than 90
-                            </label>
-                        </div>
-                    </div>
-
-                  <button type="reset" id="reset-form-btn" class="link link-primary">Reset Inputs</button>
-
-                    
-                </form>
-
-                <p id="output-text"></p>
-                <button id="submit-btn" class="link link-primary-submit">Check My Score</button>
-                
-                
+        <div class="input-container">
+            <label for="que01">Q1. What is the third angle for the triangle where angle1 = 45° and angle2 = 45°?</label>
+            <div class="radio-container">
+                <div>
+                    <input type="radio" value="45-deg" id="ans01" name="que01"  class="que01"><span>45°</span>
+                </div>
+                <div>
+                    <input type="radio" value="90-deg" id="ans01" name="que01" class="que01"><span>90°</span>
+                </div>
+                <div>
+                    <input type="radio" value="60-deg" id="ans01" name="que01" class="que01"><span>60°</span>
+                </div>
             </div>
-        </section>
+        </div>
 
-    
-    <footer class="footer">
-        <div class="footer-header">I'm active on</div>
-        <ul class="social-links list-non-bullet">
-            <li class="list-item-inline">
-                <a class="link" href="https://github.com/Ritanshi-arch">Github
+        <div class="input-container">
+            <label for="">Q2. What is the third angle for the triangle where angle1 = 45° and angle2 = 45°?</label>
+            <div class="radio-container">
+                <div>
+                    <input type="radio" value="obtuse" id="ans02" name="que02" class="que02"><span>obtuse</span>
+                </div>
+                <div>
+                    <input type="radio" value="acute" id="ans02" name="que02" class="que02"><span>acute</span>
+                </div>
+                <div>
+                    <input type="radio" value="right" id="ans022" name="que02" class="que02"><span>right</span>
+                </div>
+            </div>
+        </div>
 
-                </a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="https://twitter.com/Ritanshi16">Twitter
+        <div class="input-container">
+            <label for="">Q3. A scalene triangle has ___ lines of symmetry.</label>
+            <div class="radio-container">
+                <div>
+                    <input type="radio" value="one right angle" id="ans03-01" name="que03" class="que03"><span>Three</span>
+                </div>
+                <div>
+                    <input type="radio" value="two right angle" id="ans03-01" name="que03" class="que03"><span>No</span>
+                </div>
+                <div>
+                    <input type="radio" value="three right angle" id="ans03-01" name="que03" class="que03"><span>Two</span>
+                </div>
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="">Q4. Which of the following triangles are always similar?</label>
+            <div class="radio-container">
+                <div>
+                    <input type="radio" value="all sides are equal" id="ans04" name="que04" class="que04"><span>Equilateral triangle</span>
+                </div>
+                <div>
+                    <input type="radio" value="two sides are equal" id="ans04" name="que04" class="que04"><span>Isosceles triangle</span>
+                </div>
+                <div>
+                    <input type="radio" value="One angle is 90 degree" id="ans04" name="que04" class="que04"><span>Right angled Triangle</span>
+                </div>
+            </div>
+        </div>
+        <div class="input-container">
+            <label for="">Q5. The perimeter of scalene triangle with sides A, B, C is</label>
+            <div class="radio-container">
+                <div>
+                    <input type="radio" value="all side sum" id="ans03-01" name="que05" class="que05"><span>A + B + C</span>
+                </div>
+                <div>
+                    <input type="radio" value="one side is double" id="ans03-01" name="que05" class="que05"><span>2a </span>
+                </div>
+                <div>
+                    <input type="radio" value="sum to all side / product of all side" id="ans03-01" name="que05" class="que05"><span>(A+B+C)/ABC</span>
+                </div>
+            </div>
+        </div>
 
-                </a>
-            </li>
-            <li class="list-item-inline">
-                <a class="link" href="https://www.linkedin.com/in/ritanshi-arya-729244187/">LinkedIn
+        <div class="input-container">
+            <button id="quizBtn">Submit Answer</button>
+        </div>
+        
 
-                </a>
-            </li>
+        <div style="color: white ;" id="output"></div>
+    </section>
 
-        </ul>
-    </footer>
+    <footer></footer>
+    </body>
     <script src="./quiz.js"></script>
-</body>
-</html>

@@ -1,27 +1,34 @@
-const inputs = document.querySelectorAll(".inputs-isTriangle");
-const calculateBtn = document.querySelector("#calculate-btn");
-const output = document.querySelector("#output-hypo")
+const sides = document.querySelectorAll(".side-input");
+const hypotenuseBtn = document.querySelector("#Hypotenuse-btn");
+const output = document.querySelector("#output");
 
+function calculateSumOfSquares(a,b) {
+    var sumOfSquare = a*a + b*b;
+    return sumOfSquare;
+} 
 
-function calculateSumOfSquares(a, b){
-     const sumOfSquares = a*a + b*b;
-     return sumOfSquares;
+function calhypo(){
+     const sumOfSquares = calculateSumOfSquares(Number(sides[0].value), Number(sides[1].value));
+     const lengthOfhypotenuse = Math.sqrt(sumOfSquares);
+     if(sides[0].value == 0)
+     {
+        output.innerText = (" 😑 Value can't be NULL in Side A 😑");
+     }
+     else if(sides[0].value < 0)
+     {
+        output.innerText = ("😨 Value can't be Negative in Side A 😨");
+     }
+     else  if(sides[1].value == 0)
+     {
+        output.innerText = (" 😑 Value can't be NULL in Side B 😑");
+     }
+     else  if(sides[1].value < 0)
+     {
+        output.innerText = ("😨 Value can't be Negative in Side B 😨");
+     }
+     else{
+     output.innerText = "The length of hypotenuse is " + 
+     lengthOfhypotenuse.toFixed(2) + "cm² 🧐" ; }
 }
 
-function calculateHypo(){
-
-   if(inputs[0].value == "" || inputs[1].value == "" || inputs[0].value <= 0 || inputs[1].value <= 0){
-      output.innerText = "Please check your input values";
-   }
-   else{
-
-      const sumOfSquares = calculateSumOfSquares(Number(inputs[0].value), Number(inputs[1].value));
-   
-      const hypotenuseLength = Math.sqrt(sumOfSquares).toFixed(2);
-   
-      output.innerText = "The length of the Hypotenuse is " + hypotenuseLength;
-   }
-      
-   }
-   
-   calculateBtn.addEventListener("click", calculateHypo)
+hypotenuseBtn.addEventListener("click", calhypo);

@@ -1,22 +1,37 @@
 const que01 = document.querySelectorAll(".que01");
-const quizForm = document.querySelector(".quiz-form");
-const submitAnsBtn = document.querySelector("#submit-btn");
+const que02 = document.querySelectorAll(".que02");
+const que03 = document.querySelectorAll(".que03");
+const que04 = document.querySelectorAll(".que04");
+const que05 = document.querySelectorAll(".que05");
+const quizBtn = document.querySelector("#quizBtn");
+const quizOutput = document.querySelector("#output");
 
-const outputText = document.querySelector("#output-text");
 
-const correctAnswers = ["30", "5", "equilateral", "250", "less than 90"];
+function checkChecked(){
 
- function calculateScore(){
     let score = 0;
-    let index = 0;
-    const formResults = new FormData(quizForm);
-    for(let value of formResults.values()){
-        if(value === correctAnswers[index]){
-            score = score + 1;
-        }
-        index = index + 1;
+    if(que01[1].checked){
+        score++
     }
-    outputText.innerText = "Your score is " + score;
- } 
 
- submitAnsBtn.addEventListener("click", calculateScore)
+    if(que02[2].checked){
+        score++
+    }
+
+    if(que03[0].checked){
+        score++
+    } 
+
+    if(que04[0].checked){
+        score++
+    }
+
+    if(que05[0].checked){
+        score++
+    }
+
+
+    quizOutput.innerText = `Your Score is ${score}`
+}
+
+quizBtn.addEventListener("click", checkChecked);

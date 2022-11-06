@@ -1,21 +1,34 @@
-const baseInput = document.querySelector("#input-base");
-const heightInput = document.querySelector("#input-height");
-const outputText = document.querySelector("#output-area");
+const inputSides = document.querySelectorAll(".input");
+const checkBtn = document.querySelector("#CheckArea");
+const outPut = document.querySelector("#outputA");
 
-const calculateBtn = document.querySelector("#calculate-btn");
+function calculateArea(base , height) {
+    const calculation = base * height /2 ;
+    return(calculation);
+} 
 
 
-function calculateArea(){
-    if(baseInput.value < 0 || heightInput.value < 0 || baseInput.value == "" || heightInput.value == ""){
-        outputText.innerText = "please input valid values"
+function triangleIs() {
+    const calculation = calculateArea(Number(inputSides[0].value),Number(inputSides[1].value));
+     if(inputSides[0].value == 0 )
+    {
+        outPut.innerText = ("😓Value can't be NULL in Base input 😓")
     }
-    else{
-
+    else if(inputSides[0].value < 0 )
+    {
+        outPut.innerText = ("😟Value can't be Negative in Base input 😟")
+    }
+    else if(inputSides[1].value == 0 )
+    {
+        outPut.innerText = ("😓Value can't be null in Height input 😓")
+    }
+    else if(inputSides[1].value < 0 )
+    {
+        outPut.innerText = ("😟Value can't be Negative in Height input 😟")
+    }
+    else {outPut.innerText = "😃 Area of Triangle is " + calculation + " cm² 😃 ";}
     
-    const calculateTheArea = (baseInput.value * heightInput.value)/2
+    }
 
-    outputText.innerText = "The area of the triangle is " + calculateTheArea + " unit sq.";
-}
-}
 
-calculateBtn.addEventListener("click", calculateArea)
+checkBtn.addEventListener("click", triangleIs);
